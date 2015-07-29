@@ -12,5 +12,5 @@ Elm.Native.Vendor.make = function(elm) {
         .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
     )[1];
 
-    return elm.Native.Vendor = { prefix: vendorPrefix };
+    return elm.Native.Vendor.values = { prefix: vendorPrefix };
 }
