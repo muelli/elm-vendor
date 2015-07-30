@@ -9,7 +9,7 @@ import Vendor
 
 displayValue : String
 displayValue =
-    if Vendor.prefix == "webkit"
+    if Vendor.prefix == Vendor.Webkit
     then "-webkit-flex"
     else "flex"
 ```
