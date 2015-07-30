@@ -1,20 +1,32 @@
-module Vendor (prefix) where
+module Vendor (Prefix(Moz, Webkit, MS, O), prefix) where
 
-{-| A tiny module that returns the detected vendor prefix string
+{-| A tiny module that detects the browser vendor prefix
 
 # Definition
-@docs prefix
+@docs Prefix, prefix
 -}
 
 import Native.Vendor
 
-{-| The detected prefix string.
+{-| A union of prefix tags
+
+    type Prefix = Moz | Webkit | MS | O
+-}
+type Prefix = Moz | Webkit | MS | O
+
+
+{-| The detected vendor
 
     displayValue : String
     displayValue =
-        if Vendor.prefix == "webkit"
+        if Vendor.prefix == Vendor.Webkit
         then "-webkit-flex"
         else "flex"
 -}
-prefix : String
-prefix = Native.Vendor.prefix
+prefix : Prefix
+prefix =
+    case Native.Vendor.prefix of
+        "webkit" -> Webkit
+        "moz" -> Moz
+        "ms" -> MS
+        "o" -> O
