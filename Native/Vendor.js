@@ -13,4 +13,4 @@ Elm.Native.Vendor.make = function(elm) {
     )[1];
 
     return elm.Native.Vendor.values = { prefix: vendorPrefix };
-}
+};
