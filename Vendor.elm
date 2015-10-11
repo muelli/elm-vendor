@@ -1,4 +1,4 @@
-module Vendor (Prefix(Moz, Webkit, MS, O), prefix) where
+module Vendor (Prefix(Moz, Webkit, MS, O, Unknown), prefix) where
 
 {-| A tiny module that detects the browser vendor prefix
 
@@ -17,15 +17,15 @@ import Native.Vendor
 
 {-| A union of prefix tags
 -}
-type Prefix = Moz | Webkit | MS | O
+type Prefix = Moz | Webkit | MS | O | Unknown
 
 
 {-| The detected vendor
 -}
 prefix : Prefix
 prefix =
-    case Native.Vendor.prefix of
-        "webkit" -> Webkit
-        "moz" -> Moz
-        "ms" -> MS
-        "o" -> O
+    if Native.Vendor.prefix == "webkit" then Webkit
+    else if Native.Vendor.prefix == "moz" then Moz
+    else if Native.Vendor.prefix == "ms" then MS
+    else if Native.Vendor.prefix == "o" then O
+    else Unknown
