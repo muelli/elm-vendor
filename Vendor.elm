@@ -1,4 +1,4 @@
-module Vendor (Prefix(Moz, Webkit, MS, O, Unknown), prefix) where
+module Vendor exposing (Prefix(Moz, Webkit, MS, O, Unknown), prefix)
 
 {-| A tiny module that detects the browser vendor prefix
 
