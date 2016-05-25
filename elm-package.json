@@ -1,7 +1,7 @@
 {
-    "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
+    "version": "3.0.0",
+    "summary": "detect browser vendor prefix",
+    "repository": "https://github.com/coreytrampe/elm-vendor.git",
     "license": "BSD3",
     "source-directories": [
         "."
