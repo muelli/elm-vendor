@@ -1,5 +1,5 @@
 
-var _user$project$Native_Vendor = function(elm) {
+var _coreytrampe$elm_vendor$Native_Vendor = function(elm) {
 
     //  http://davidwalsh.name/vendor-prefix
     var styles = window.getComputedStyle(document.documentElement, '');
