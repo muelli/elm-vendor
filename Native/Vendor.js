@@ -1,8 +1,12 @@
 
 var _coreytrampe$elm_vendor$Native_Vendor = function(elm) {
 
-    //  http://davidwalsh.name/vendor-prefix
-    var styles = window.getComputedStyle(document.documentElement, '');
+    try {
+        //  http://davidwalsh.name/vendor-prefix
+        var styles = window.getComputedStyle(document.documentElement, '');
+    } catch (err) {
+        var styles = "";
+    }
     var vendorPrefix = (Array.prototype.slice
         .call(styles)
         .join('')
